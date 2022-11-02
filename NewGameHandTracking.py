@@ -10,8 +10,8 @@ detector = htm.handDetector()
 
 while True:
     success, img = cap.read()
-    img = detector.findHands(img)
-    lmList = detector.findPosition(img)
+    img = detector.findHands(img, draw=False)
+    lmList = detector.findPosition(img, draw=False)
     if len(lmList) != 0:
         print(lmList[4])
 
